@@ -44,8 +44,8 @@ while page <= num_of_pages:
                          if m'Early' in early.getText()]
     mid_career_list = [int(mid.getText().replace('Mid-Career Pay:$', '').replace(',', '')) for mid in stats
                        if 'Mid' in mid.getText()]
-    meaning_list = [mid.getText().replace('% High Meaning:', '').replace('-', '') for mid in stats
-                    if 'High' in mid.getText()]
+    meaning_list = [meaning.getText().replace('% High Meaning:', '').replace('-', '') for meaning in stats
+                    if 'High' in meaning.getText()]
 
     # Add data from local lists to global lists
     for item in major_list:
